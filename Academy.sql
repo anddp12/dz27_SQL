@@ -25,3 +25,20 @@ INSERT INTO "Преподаватели (Teachers)" VALUES (10, "Евгений"
 INSERT INTO "Преподаватели (Teachers)" VALUES (19, "Роман", "Безус", "Старший преподаватель", 19500, "2013-10-15", 0, 0, 0);
 INSERT INTO "Преподаватели (Teachers)" VALUES (11, "Евгений", "Селезнев", "Профессор", 25000, "2012-11-02", 0, 0, 1);
 INSERT INTO "Преподаватели (Teachers)" VALUES (9, "Николай", "Калинич", "Доцент", 22500, "2014-07-11", 0, 0, 0);
+
+
+DROP TABLE IF EXISTS "Факультеты (Faculties)";
+
+CREATE TABLE "Факультеты (Faculties)" (
+	"ID"	INTEGER NOT NULL UNIQUE,
+	"Название факультета"	TEXT NOT NULL UNIQUE,
+	"Декан факультета"	TEXT NOT NULL,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+INSERT INTO "Факультеты (Faculties)" VALUES (1, "Архитектурный", "Мирон Маркевич");
+INSERT INTO "Факультеты (Faculties)" VALUES (2, "Информационных технологий", "Александр Петраков");
+INSERT INTO "Факультеты (Faculties)" VALUES (3, "Строительный", "Виктор Скрипник");
+
+
+
