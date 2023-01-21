@@ -56,3 +56,25 @@ INSERT INTO "Кафедры (Departments)" VALUES (3, "Автоматизаци�
 INSERT INTO "Кафедры (Departments)" VALUES (4, "Компьютерных наук", 19500);
 INSERT INTO "Кафедры (Departments)" VALUES (5, "Организации управления", 23000);
 INSERT INTO "Кафедры (Departments)" VALUES (6, "Инженерный", 11500);
+
+
+DROP TABLE IF EXISTS "Группы (Groups)";
+
+CREATE TABLE "Группы (Groups)" (
+	"ID"	INTEGER NOT NULL UNIQUE,
+	"Название группы"	TEXT NOT NULL UNIQUE,
+	"Курс (Year)"	INTEGER NOT NULL,
+	"Рейтинг группы"	INTEGER NOT NULL,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
+
+INSERT INTO "Группы (Groups)" VALUES (1, "Архитектуры5", 5, 1);
+INSERT INTO "Группы (Groups)" VALUES (2, "Инженерный5", 5, 5);
+INSERT INTO "Группы (Groups)" VALUES (3, "Компьютерных наук4", 4, 2);
+INSERT INTO "Группы (Groups)" VALUES (4, "Организации управления4", 4, 4);
+INSERT INTO "Группы (Groups)" VALUES (5, "Инженерный4", 4, 3);
+INSERT INTO "Группы (Groups)" VALUES (6, "Компьютерных наук3", 3, 3);
+INSERT INTO "Группы (Groups)" VALUES (7, "Инженерный2", 2, 4);
+INSERT INTO "Группы (Groups)" VALUES (8, "Автоматизации2", 2, 2);
+INSERT INTO "Группы (Groups)" VALUES (9, "Инженерный1", 1,5);
+INSERT INTO "Группы (Groups)" VALUES (10, "Архитектурного проектирования1", 1, 1);
