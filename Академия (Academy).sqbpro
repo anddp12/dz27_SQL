@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/a.taran/Documents/dz27_SQL/Академия (Academy).db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="3454"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,37:mainПреподаватели (Teachers)"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="214"/><column index="2" value="70"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Группы (Groups)" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="272"/><column index="3" value="111"/><column index="4" value="151"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Кафедры (Departments)" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="263"/><column index="3" value="266"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Преподаватели (Teachers)" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="52"/><column index="2" value="89"/><column index="3" value="100"/><column index="4" value="201"/><column index="5" value="66"/><column index="6" value="216"/><column index="7" value="192"/><column index="8" value="216"/><column index="9" value="230"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Факультеты (Faculties)" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="242"/><column index="3" value="173"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="Academy.sql">DROP TABLE IF EXISTS &quot;Преподаватели (Teachers)&quot;;
+
+CREATE TABLE &quot;Преподаватели (Teachers)&quot; (
+	&quot;ID&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;Имя&quot;	TEXT NOT NULL,
+	&quot;Фамилия&quot;	TEXT NOT NULL,
+	&quot;Должность (Position)&quot;	TEXT NOT NULL,
+	&quot;ЗП&quot;	REAL NOT NULL,
+	&quot;Дата приема на работу&quot;	TEXT NOT NULL,
+	&quot;Надбавка (Premium)&quot;	REAL NOT NULL DEFAULT 0,
+	&quot;Ассистент (IsAssistant)&quot;	INTEGER NOT NULL DEFAULT 0,
+	&quot;Профессор (IsProfessor)&quot;	INTEGER NOT NULL DEFAULT 0,
+	PRIMARY KEY(&quot;ID&quot; AUTOINCREMENT)
+);
+
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (1, &quot;Денис&quot;, &quot;Бойко&quot;, &quot;Старший преподаватель&quot;, 9500, &quot;2013-08-23&quot;, 550, 0, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (2, &quot;Игорь&quot;, &quot;Варцаба&quot;, &quot;Ассистент&quot;, 8000, &quot;2020-09-14&quot;, 150, 1, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (3, &quot;Александр&quot;, &quot;Сваток&quot;, &quot;Ассистент&quot;, 8000, &quot;2013-03-18&quot;, 150, 1, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (4, &quot;Дмитрий&quot;, &quot;Чигринский&quot;, &quot;Доцент&quot;, 11500, &quot;2011-05-28&quot;, 500, 0, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (5, &quot;Евгений&quot;, &quot;Чеберячко&quot;, &quot;Доцент&quot;, 11500, &quot;2012-09-11&quot;, 1000, 0, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (6, &quot;Артем&quot;, &quot;Федецкий&quot;, &quot;Профессор&quot;, 13500, &quot;2010-07-21&quot;, 450, 0, 1);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (7, &quot;Роман&quot;, &quot;Зозуля&quot;, &quot;Профессор&quot;, 13500, &quot;2010-03-07&quot;, 0, 0, 1);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (8, &quot;Евгений&quot;, &quot;Шахов&quot;, &quot;Ассистент&quot;, 8000, &quot;2020-05-16&quot;, 180, 1, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (9, &quot;Евгений&quot;, &quot;Коноплянка&quot;, &quot;Старший преподаватель&quot;, 9500, &quot;2011-02-19&quot;, 550, 0, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (10, &quot;Роман&quot;, &quot;Безус&quot;, &quot;Старший преподаватель&quot;, 9500, &quot;2013-10-15&quot;, 600, 0, 0);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (11, &quot;Евгений&quot;, &quot;Селезнев&quot;, &quot;Профессор&quot;, 13500, &quot;2012-11-02&quot;, 0, 0, 1);
+INSERT INTO &quot;Преподаватели (Teachers)&quot; VALUES (12, &quot;Николай&quot;, &quot;Калинич&quot;, &quot;Доцент&quot;, 11500, &quot;2014-07-11&quot;, 1000, 0, 0);
+
+
+DROP TABLE IF EXISTS &quot;Факультеты (Faculties)&quot;;
+
+CREATE TABLE &quot;Факультеты (Faculties)&quot; (
+	&quot;ID&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;Название факультета&quot;	TEXT NOT NULL UNIQUE,
+	&quot;Декан факультета&quot;	TEXT NOT NULL,
+	PRIMARY KEY(&quot;ID&quot; AUTOINCREMENT)
+);
+
+INSERT INTO &quot;Факультеты (Faculties)&quot; VALUES (1, &quot;Архитектурный&quot;, &quot;Мирон Маркевич&quot;);
+INSERT INTO &quot;Факультеты (Faculties)&quot; VALUES (2, &quot;Информационных технологий&quot;, &quot;Александр Петраков&quot;);
+INSERT INTO &quot;Факультеты (Faculties)&quot; VALUES (3, &quot;Строительный&quot;, &quot;Виктор Скрипник&quot;);
+
+
+DROP TABLE IF EXISTS &quot;Кафедры (Departments)&quot;;
+
+CREATE TABLE &quot;Кафедры (Departments)&quot; (
+	&quot;ID&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;Название кафедры&quot;	TEXT NOT NULL UNIQUE,
+	&quot;Финансирование (Financing)&quot;	REAL NOT NULL DEFAULT 0,
+	PRIMARY KEY(&quot;ID&quot; AUTOINCREMENT)
+);
+
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (1, &quot;Архитектуры&quot;, 31000);
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (2, &quot;Архитектурного проектирования&quot;, 21000);
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (3, &quot;Автоматизации&quot;, 21500);
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (4, &quot;Компьютерных наук&quot;, 19500);
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (5, &quot;Организации управления&quot;, 23000);
+INSERT INTO &quot;Кафедры (Departments)&quot; VALUES (6, &quot;Инженерный&quot;, 11500);
+
+
+DROP TABLE IF EXISTS &quot;Группы (Groups)&quot;;
+
+CREATE TABLE &quot;Группы (Groups)&quot; (
+	&quot;ID&quot;	INTEGER NOT NULL UNIQUE,
+	&quot;Название группы&quot;	TEXT NOT NULL UNIQUE,
+	&quot;Курс (Year)&quot;	INTEGER NOT NULL,
+	&quot;Рейтинг группы&quot;	INTEGER NOT NULL,
+	PRIMARY KEY(&quot;ID&quot; AUTOINCREMENT)
+);
+
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (1, &quot;Архитектуры5&quot;, 5, 1);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (2, &quot;Инженерный5&quot;, 5, 5);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (3, &quot;Компьютерных наук4&quot;, 4, 2);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (4, &quot;Организации управления4&quot;, 4, 4);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (5, &quot;Инженерный4&quot;, 4, 3);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (6, &quot;Компьютерных наук3&quot;, 3, 0);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (7, &quot;Инженерный2&quot;, 2, 0);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (8, &quot;Автоматизации2&quot;, 2, 0);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (9, &quot;Инженерный1&quot;, 1,0);
+INSERT INTO &quot;Группы (Groups)&quot; VALUES (10, &quot;Архитектурного проектирования1&quot;, 1, 0);
+
+
+-- 1. Вывести таблицу кафедр, но расположить ее поля в обратном порядке. 
+SELECT * FROM &quot;Кафедры (Departments)&quot; 
+ORDER BY ID DESC;
+
+SELECT * FROM &quot;Кафедры (Departments)&quot; 
+ORDER BY &quot;Название кафедры&quot;; -- сортировка по названию
+
+-- 2. Вывести названия групп и их рейтинги с уточнением имен полей именем таблицы.
+SELECT &quot;Название группы&quot;, &quot;Рейтинг группы&quot; 
+FROM &quot;Группы (Groups)&quot;;
+
+SELECT * FROM &quot;Группы (Groups)&quot; 
+ORDER BY &quot;Рейтинг группы&quot;; -- сортировка по рейтингу от большего к меньшему 
+
+SELECT * FROM &quot;Группы (Groups)&quot; 
+ORDER BY &quot;Рейтинг группы&quot; DESC LIMIT 3; -- первые 3 
+
+-- 5. Вывести фамилии преподавателей, которые являются профессорами и ставка которых превышает 1050.
+SELECT * 
+FROM &quot;Преподаватели (Teachers)&quot; 
+WHERE &quot;ЗП&quot; &gt;1050 AND &quot;Профессор (IsProfessor)&quot; == 1;
+
+-- 6. Вывести названия кафедр, фонд финансирования от 11600 до 25000.
+SELECT * FROM &quot;Кафедры (Departments)&quot; 
+WHERE &quot;Финансирование (Financing)&quot; &gt;= 11600 AND &quot;Финансирование (Financing)&quot; &lt;=25000 
+ORDER BY &quot;Финансирование (Financing)&quot;;
+
+-- 7. Вывести названия факультетов кроме факультета “Информационных технологий”
+SELECT * 
+FROM &quot;Факультеты (Faculties)&quot; 
+WHERE &quot;Название факультета&quot; != &quot;Информационных технологий&quot;; 
+
+--8. Вывести фамилии и должности преподавателей, которые не являются профессорами
+SELECT &quot;Фамилия&quot;,&quot;Должность (Position)&quot; 
+FROM &quot;Преподаватели (Teachers)&quot; 
+WHERE &quot;Профессор (IsProfessor)&quot; == 0;
+
+--9. Вывести фамилии, должности, ставки и надбавки ассистентов, у которых надбавка в диапазоне от 160 до 550.
+SELECT &quot;Фамилия&quot;, &quot;Должность (Position)&quot;, &quot;ЗП&quot;, &quot;Надбавка (Premium)&quot; 
+FROM &quot;Преподаватели (Teachers)&quot; 
+WHERE &quot;Надбавка (Premium)&quot; BETWEEN 160 and 550;
+
+--10. Вывести фамилии и ставки ассистентов.
+SELECT &quot;Фамилия&quot;,&quot;ЗП&quot; 
+FROM &quot;Преподаватели (Teachers)&quot; 
+WHERE &quot;Ассистент (IsAssistant)&quot; == 1;
+
+--SELECT &quot;Фамилия&quot;,&quot;ЗП&quot; FROM &quot;Преподаватели (Teachers)&quot; WHERE &quot;Должность (Position)&quot; == &quot;Ассистент&quot;;
+
+--14. Вывести названия групп 5-го курса, имеющих рейтинг в диапазоне от 2 до 4
+SELECT &quot;Название группы&quot; 
+FROM &quot;Группы (Groups)&quot; 
+WHERE &quot;Рейтинг группы&quot; BETWEEN 2 and 4;
+
+--15. Вывести фамилии ассистентов со ставкой меньше 550 или надбавкой меньше 200.
+SELECT &quot;Фамилия&quot; 
+FROM &quot;Преподаватели (Teachers)&quot; 
+WHERE &quot;Ассистент (IsAssistant)&quot; == 1 AND &quot;Надбавка (Premium)&quot; &lt; 200 OR &quot;ЗП&quot; &lt; 550 ;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
